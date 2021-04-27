@@ -1,5 +1,5 @@
 {
-  "name": "@template/leaf-api",
+  "name": "@sloth/leaf-api",
   "version": "0.0.0",
   "main": "dist/index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "test:debug": "node --inspect-brk node_modules/.bin/jest"
   },
   "dependencies": {
-    "@template/precedent-iso": "../precedent-iso"
+    "@sloth/precedent-iso": "../precedent-iso"
   },
   "devDependencies": {
     "@types/eslint": "^7",

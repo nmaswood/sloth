@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import * as T from "@template/precedent-iso";
+import * as T from "@sloth/precedent-iso";
 
 function App() {
   return (

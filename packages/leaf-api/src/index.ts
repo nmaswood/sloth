@@ -1,1 +1,1 @@
-import * as _ from "@template/precedent-iso";
+import * as _ from "@sloth/precedent-iso";

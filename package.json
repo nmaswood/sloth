@@ -1,7 +1,7 @@
 {
-  "name": "@template/mono-repo",
+  "name": "@sloth/monorepo",
   "version": "0.0.0",
-  "description": "Schedule all the things",
+  "description": "Write my thoughts down",
   "repository": "git@github.com:nmaswood/lox-ts.git",
   "author": "Nasr.Maswood <nasrmaswood@gmail.com>",
   "license": "MIT",
