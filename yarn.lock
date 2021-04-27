@@ -2114,15 +2114,15 @@ __metadata:
 
 "@sloth/precedent-iso@file:../precedent-iso::locator=%40sloth%2Fleaf-api%40workspace%3Apackages%2Fleaf-api":
   version: 0.0.0
-  resolution: "@sloth/precedent-iso@file:../precedent-iso#../precedent-iso::hash=14683a&locator=%40sloth%2Fleaf-api%40workspace%3Apackages%2Fleaf-api"
-  checksum: 6de4f076dd9940d5cebd57ee1521a3061db6d36e9971d138f93dd4f45e8a60bf889a8f5dedbc49891224f403f55b94659d3b249599d443c8adb6db7ec5de012f
+  resolution: "@sloth/precedent-iso@file:../precedent-iso#../precedent-iso::hash=2c3d1d&locator=%40sloth%2Fleaf-api%40workspace%3Apackages%2Fleaf-api"
+  checksum: d5d86fee2aa92a79f3c5f792241a4b9d7b8e05c5d9f42857244c5593cb87ca95df4c75ce620b3a29b733e4292b5682118a8a0fc7fcb50719246c56d2c9825bb3
   languageName: node
   linkType: hard
 
 "@sloth/precedent-iso@file:../precedent-iso::locator=%40sloth%2Fleaf-app%40workspace%3Apackages%2Fleaf-app":
   version: 0.0.0
-  resolution: "@sloth/precedent-iso@file:../precedent-iso#../precedent-iso::hash=14683a&locator=%40sloth%2Fleaf-app%40workspace%3Apackages%2Fleaf-app"
-  checksum: 6de4f076dd9940d5cebd57ee1521a3061db6d36e9971d138f93dd4f45e8a60bf889a8f5dedbc49891224f403f55b94659d3b249599d443c8adb6db7ec5de012f
+  resolution: "@sloth/precedent-iso@file:../precedent-iso#../precedent-iso::hash=2c3d1d&locator=%40sloth%2Fleaf-app%40workspace%3Apackages%2Fleaf-app"
+  checksum: d5d86fee2aa92a79f3c5f792241a4b9d7b8e05c5d9f42857244c5593cb87ca95df4c75ce620b3a29b733e4292b5682118a8a0fc7fcb50719246c56d2c9825bb3
   languageName: node
   linkType: hard
 

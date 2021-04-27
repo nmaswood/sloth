@@ -2034,6 +2034,38 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sloth/leaf-app@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@sloth/leaf-app@workspace:."
+  dependencies:
+    "@sloth/precedent-iso": ../precedent-iso
+    "@testing-library/jest-dom": ^5.11.4
+    "@testing-library/react": ^11.1.0
+    "@testing-library/user-event": ^12.1.10
+    "@types/eslint": ^7
+    "@types/jest": ^26.0.15
+    "@types/node": ^12.0.0
+    "@types/prettier": ^2
+    "@types/react": ^17.0.0
+    "@types/react-dom": ^17.0.0
+    "@types/testing-library__jest-dom": ^5
+    eslint: ^7.24.0
+    prettier: ^2.2.1
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-scripts: 4.0.3
+    typescript: ^4.1.2
+    web-vitals: ^1.0.1
+  languageName: unknown
+  linkType: soft
+
+"@sloth/precedent-iso@file:../precedent-iso::locator=%40sloth%2Fleaf-app%40workspace%3A.":
+  version: 0.0.0
+  resolution: "@sloth/precedent-iso@file:../precedent-iso#../precedent-iso::hash=2c3d1d&locator=%40sloth%2Fleaf-app%40workspace%3A."
+  checksum: d5d86fee2aa92a79f3c5f792241a4b9d7b8e05c5d9f42857244c5593cb87ca95df4c75ce620b3a29b733e4292b5682118a8a0fc7fcb50719246c56d2c9825bb3
+  languageName: node
+  linkType: hard
+
 "@surma/rollup-plugin-off-main-thread@npm:^1.1.1":
   version: 1.4.2
   resolution: "@surma/rollup-plugin-off-main-thread@npm:1.4.2"
@@ -2172,38 +2204,6 @@ __metadata:
     "@svgr/plugin-svgo": ^5.5.0
     loader-utils: ^2.0.0
   checksum: 077a569a0e2d8381370cef2802578ce598e2ed9718d5ab68c7cfa84672a4186802204f6bbe164620064af39ee2a5c3d69fcdea999e4a2264715ab3683f459be1
-  languageName: node
-  linkType: hard
-
-"@template/leaf-app@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@template/leaf-app@workspace:."
-  dependencies:
-    "@template/precedent-iso": ../precedent-iso
-    "@testing-library/jest-dom": ^5.11.4
-    "@testing-library/react": ^11.1.0
-    "@testing-library/user-event": ^12.1.10
-    "@types/eslint": ^7
-    "@types/jest": ^26.0.15
-    "@types/node": ^12.0.0
-    "@types/prettier": ^2
-    "@types/react": ^17.0.0
-    "@types/react-dom": ^17.0.0
-    "@types/testing-library__jest-dom": ^5
-    eslint: ^7.24.0
-    prettier: ^2.2.1
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    react-scripts: 4.0.3
-    typescript: ^4.1.2
-    web-vitals: ^1.0.1
-  languageName: unknown
-  linkType: soft
-
-"@template/precedent-iso@file:../precedent-iso::locator=%40template%2Fleaf-app%40workspace%3A.":
-  version: 0.0.0
-  resolution: "@template/precedent-iso@file:../precedent-iso#../precedent-iso::hash=4740ba&locator=%40template%2Fleaf-app%40workspace%3A."
-  checksum: 658806a2582fd7478913c3572449705c0d9052ef6f5bab33858e4fd7e762a540e23201bf3203f9a6e3cc0c4ef59dd0135dc400392eb029ca2044dab3a101d6e0
   languageName: node
   linkType: hard
 
