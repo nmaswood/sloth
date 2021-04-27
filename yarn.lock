@@ -2035,7 +2035,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@sloth/leaf-api@workspace:packages/leaf-api"
   dependencies:
-    "@sloth/precedent-iso": ../precedent-iso
+    "@sloth/precedent-iso": "workspace:packages/precedent-iso"
     "@types/eslint": ^7
     "@types/prettier": ^2
     "@typescript-eslint/eslint-plugin": ^4.22.0
@@ -2078,13 +2078,6 @@ __metadata:
   resolution: "@sloth/monorepo@workspace:."
   languageName: unknown
   linkType: soft
-
-"@sloth/precedent-iso@file:../precedent-iso::locator=%40sloth%2Fleaf-api%40workspace%3Apackages%2Fleaf-api":
-  version: 0.0.0
-  resolution: "@sloth/precedent-iso@file:../precedent-iso#../precedent-iso::hash=65f44a&locator=%40sloth%2Fleaf-api%40workspace%3Apackages%2Fleaf-api"
-  checksum: 8536aee1d9c55aec6762cbab84c4f75a6ed4c2851348e239876f39702979e784ef63efa35ec1b12903fd0c46e07199e9819dadd8294f9d667eafe0498587ce2e
-  languageName: node
-  linkType: hard
 
 "@sloth/precedent-iso@file:../precedent-iso::locator=%40sloth%2Fleaf-app%40workspace%3Apackages%2Fleaf-app":
   version: 0.0.0

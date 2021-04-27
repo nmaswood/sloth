@@ -2038,7 +2038,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@sloth/leaf-app@workspace:."
   dependencies:
-    "@sloth/precedent-iso": ../precedent-iso
     "@testing-library/jest-dom": ^5.11.4
     "@testing-library/react": ^11.1.0
     "@testing-library/user-event": ^12.1.10
@@ -2058,13 +2057,6 @@ __metadata:
     web-vitals: ^1.0.1
   languageName: unknown
   linkType: soft
-
-"@sloth/precedent-iso@file:../precedent-iso::locator=%40sloth%2Fleaf-app%40workspace%3A.":
-  version: 0.0.0
-  resolution: "@sloth/precedent-iso@file:../precedent-iso#../precedent-iso::hash=2c3d1d&locator=%40sloth%2Fleaf-app%40workspace%3A."
-  checksum: d5d86fee2aa92a79f3c5f792241a4b9d7b8e05c5d9f42857244c5593cb87ca95df4c75ce620b3a29b733e4292b5682118a8a0fc7fcb50719246c56d2c9825bb3
-  languageName: node
-  linkType: hard
 
 "@surma/rollup-plugin-off-main-thread@npm:^1.1.1":
   version: 1.4.2
