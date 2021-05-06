@@ -38,8 +38,18 @@ jobs:
         export_default_credentials: true
 
     - name: Deploy frontend
+      working-directory: ./packages/leaf-app
       run: | 
-       cd packages/leaf-app
        gsutil -m rsync  build  gs://nmaswood-sloth/
        gsutil cp app.yaml gs://nmaswood-sloth/app.yaml
+       gcloud app deploy --quiet
+
+    - name: Deploy backend
+      working-directory: ./packages/leaf-api
+      run: | 
+       cd packages/leaf-api
+       gcloud app deploy --quiet
+
+    - name: Deploy Dispatch
+      run: | 
        gcloud app deploy --quiet
