@@ -28,8 +28,6 @@ jobs:
     - name: install
       run: yarn install
 
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
     - name: build
       run: yarn build
 
