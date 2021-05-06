@@ -5,8 +5,7 @@
   "scripts": {
     "build": "yarn tsc",
     "watch": "tsc --watch",
-    "start": "ts-node src/index.ts",
-    "start:prod": "node dist/src/index.js",
+    "start": "node dist/src/index.js",
     "fix": "yarn fix:format && yarn fix:lint",
     "fix:format": "prettier --write src",
     "fix:lint": "eslint --fix src",
