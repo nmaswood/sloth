@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ master ]
 
-jobs:
+app:
   build:
     runs-on: ubuntu-latest
 
@@ -31,21 +31,22 @@ jobs:
     - name: build
       run: yarn build
 
-    - uses: google-github-actions/setup-gcloud@master
+    - name: Set up Cloud SDK
+      uses: google-github-actions/setup-gcloud@master
       with:
         project_id: ${{ secrets.GCP_PROJECT_ID }}
         service_account_key: ${{ secrets.GCP_SA_KEY }}
         export_default_credentials: true
 
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
+    #- name: Setup tmate session
+      #uses: mxschmitt/action-tmate@v3
 
     - name: Deploy frontend
       working-directory: ./packages/leaf-app
-      run: | 
-       gsutil -m rsync  build  gs://nmaswood-sloth/
-       gsutil cp app.yaml gs://nmaswood-sloth/app.yaml
-       gcloud app deploy --quiet
+      run: |
+       docker build . -f Dockerfile -t "sloth/app:$$(git rev-parse --short HEAD)"
+       docker tag "sloth/app:$$(git rev-parse --short HEAD)" gcr.io/nasr-learn/sloth/app:latest
+       docker push gcr.io/nasr-learn/sloth/app
 
     - name: Deploy backend
       working-directory: ./packages/leaf-api
