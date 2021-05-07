@@ -51,9 +51,6 @@ app:
     - name: Deploy backend
       working-directory: ./packages/leaf-api
       run: | 
-       cd packages/leaf-api
-       gcloud app deploy --quiet
-
-    - name: Deploy Dispatch
-      run: | 
-       gcloud app deploy --quiet
+       docker build . -f Dockerfile -t "sloth/api:$$(git rev-parse --short HEAD)"
+       docker tag "sloth/api:$$(git rev-parse --short HEAD)" gcr.io/nasr-learn/sloth/api:latest
+       docker push gcr.io/nasr-learn/sloth/api
