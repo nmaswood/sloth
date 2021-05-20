@@ -46,6 +46,6 @@ jobs:
 
     - name: Deploy backend
       run: |
-        docker build . -f packages/leaf-api/Dockerfile -t "sloth/api:$(git rev-parse --short HEAD)"
+       docker build . -f packages/leaf-api/Dockerfile -t "sloth/api:$(git rev-parse --short HEAD)"
        docker tag "sloth/api:$(git rev-parse --short HEAD)" gcr.io/nasr-learn/sloth/api:latest
        docker push gcr.io/nasr-learn/sloth/api
