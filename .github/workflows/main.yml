@@ -41,13 +41,13 @@ jobs:
     - name: Deploy frontend
       working-directory: ./packages/leaf-app
       run: |
-       docker build . -f Dockerfile -t "sloth/app:$$(git rev-parse --short HEAD)"
-       docker tag "sloth/app:$$(git rev-parse --short HEAD)" gcr.io/nasr-learn/sloth/app:latest
+       docker build . -f Dockerfile -t "sloth/app:$(git rev-parse --short HEAD)"
+       docker tag "sloth/app:$(git rev-parse --short HEAD)" gcr.io/nasr-learn/sloth/app:latest
        docker push gcr.io/nasr-learn/sloth/app
 
     - name: Deploy backend
       working-directory: ./packages/leaf-api
       run: |
-       docker build . -f Dockerfile -t "sloth/api:$$(git rev-parse --short HEAD)"
-       docker tag "sloth/api:$$(git rev-parse --short HEAD)" gcr.io/nasr-learn/sloth/api:latest
+       docker build . -f Dockerfile -t "sloth/api:$(git rev-parse --short HEAD)"
+       docker tag "sloth/api:$(git rev-parse --short HEAD)" gcr.io/nasr-learn/sloth/api:latest
        docker push gcr.io/nasr-learn/sloth/api
