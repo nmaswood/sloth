@@ -42,10 +42,12 @@ jobs:
       run: |
        DOCKER_BUILDKIT=1  docker build . -f packages/leaf-app/Dockerfile -t "sloth/app:$(git rev-parse --short HEAD)"
        docker tag "sloth/app:$(git rev-parse --short HEAD)" gcr.io/nasr-learn/sloth/app:latest
+       gcloud info
        docker push gcr.io/nasr-learn/sloth/app
 
     - name: Deploy backend
       run: |
        DOCKER_BUILDKIT=1 docker build . -f packages/leaf-api/Dockerfile -t "sloth/api:$(git rev-parse --short HEAD)"
        docker tag "sloth/api:$(git rev-parse --short HEAD)" gcr.io/nasr-learn/sloth/api:latest
+       gcloud info
        docker push gcr.io/nasr-learn/sloth/api
