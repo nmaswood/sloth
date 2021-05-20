@@ -34,6 +34,14 @@ jobs:
        docker tag "sloth/app:$(git rev-parse --short HEAD)" gcr.io/nasr-learn/sloth/app:latest
        gcloud auth configure-docker --quiet
        docker push gcr.io/nasr-learn/sloth/app
+       gcloud run deploy sloth-app  \
+         --image gcr.io/nasr-learn/sloth/app \
+         --platform managed \
+         --region us-central1 \
+         --max-instances 1 \
+         --update-env-vars ENV=PRODUCTION \
+         --service-account devops@nasr-learn.iam.gserviceaccount.com \
+         --allow-unauthenticated
 
     - name: Deploy backend
       run: |
@@ -41,3 +49,11 @@ jobs:
        docker tag "sloth/api:$(git rev-parse --short HEAD)" gcr.io/nasr-learn/sloth/api:latest
        gcloud auth configure-docker --quiet
        docker push gcr.io/nasr-learn/sloth/api
+       gcloud run deploy sloth-api  \
+         --image gcr.io/nasr-learn/sloth/api \
+         --platform managed \
+         --region us-central1 \
+         --max-instances 1 \
+         --update-env-vars ENV=PRODUCTION \
+         --service-account devops@nasr-learn.iam.gserviceaccount.com \
+         --allow-unauthenticated
