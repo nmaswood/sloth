@@ -21,16 +21,6 @@ jobs:
         key: ubuntu-latest-node-14.x-yarn-${{ hashFiles('**/yarn.lock') }}
         restore-keys: |
             ubuntu-latest-node-14.x-yarn-
-    #- name: Setup Node.js environment
-      #uses: actions/setup-node@v2
-      #with:
-         #node-version: 14.x
-    #- name: install
-      #run: yarn install
-
-    #- name: build
-      #run: yarn build
-
     - name: Set up Cloud SDK
       uses: google-github-actions/setup-gcloud@master
       with:
@@ -42,12 +32,12 @@ jobs:
       run: |
        DOCKER_BUILDKIT=1  docker build . -f packages/leaf-app/Dockerfile -t "sloth/app:$(git rev-parse --short HEAD)"
        docker tag "sloth/app:$(git rev-parse --short HEAD)" gcr.io/nasr-learn/sloth/app:latest
-       gcloud info
+       gcloud auth configure-docker --quiet
        docker push gcr.io/nasr-learn/sloth/app
 
     - name: Deploy backend
       run: |
        DOCKER_BUILDKIT=1 docker build . -f packages/leaf-api/Dockerfile -t "sloth/api:$(git rev-parse --short HEAD)"
        docker tag "sloth/api:$(git rev-parse --short HEAD)" gcr.io/nasr-learn/sloth/api:latest
-       gcloud info
+       gcloud auth configure-docker --quiet
        docker push gcr.io/nasr-learn/sloth/api
