@@ -29,15 +29,15 @@ export const Configuration = t.type({
 
 export const CONFIGURATION = F.pipe(
   Configuration.decode({
-    port: process.env.PORT ?? "8085",
-    host: process.env.HOST ?? "0.0.0.0",
-    nodeEnv: process.env.NODE_ENV ?? "development",
+    port: process.env.PORT,
+    host: process.env.HOST,
+    nodeEnv: process.env.NODE_ENV,
     databaseConfiguration: {
-      host: process.env.DB_HOST ?? "localhost",
-      port: process.env.DB_PORT ?? "9999",
-      user: process.env.DB_USER ?? "postgres",
-      password: process.env.DB_PASSWORD ?? "postgres",
-      name: process.env.DB_NAME ?? "postgres",
+      host: process.env.DB_HOST,
+      port: process.env.DB_PORT,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      name: process.env.DB_NAME,
     },
   }),
   E.getOrElseW((e) => {
