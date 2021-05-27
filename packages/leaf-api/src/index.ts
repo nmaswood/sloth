@@ -1,5 +1,3 @@
-import * as _ from "@sloth/precedent-iso";
-
 import fastify from "fastify";
 
 import * as C from "./config";
