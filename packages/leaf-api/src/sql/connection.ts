@@ -1,11 +1,16 @@
-export const test = 1;
-//import { createPool } from "slonik";
-//import { CONFIGURATION, DatabaseConfiguration } from "../config";
+import { CONFIGURATION, DatabaseConfiguration } from "../config";
+import { createPool } from "slonik";
 
-//export const pool = createPool(
-//connectionStringFromConfig(CONFIGURATION.databaseConfiguration)
-//);
+export const pool = createPool(
+  connectionUrlFromConfig(CONFIGURATION.databaseConfiguration)
+);
 
-//function connectionStringFromConfig(_: DatabaseConfiguration): string {
-//return "";
-//}
+function connectionUrlFromConfig({
+  host,
+  port,
+  user,
+  password,
+  name,
+}: DatabaseConfiguration) {
+  return `postgres://${user}:${password}@${host}:${port}/${name}`;
+}

@@ -2,7 +2,6 @@ import * as t from "io-ts";
 import * as E from "fp-ts/lib/Either";
 import * as F from "fp-ts/function";
 
-import as from "fs/promises";
 export type DatabaseConfiguration = t.TypeOf<typeof DatabaseConfiguration>;
 
 export const DatabaseConfiguration = t.type({
