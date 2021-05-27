@@ -14,9 +14,16 @@ export const DatabaseConfiguration = t.type({
 
 export type Configuration = t.TypeOf<typeof Configuration>;
 
+export const NodeEnv = t.keyof({
+  development: null,
+  test: null,
+  production: null,
+});
+
 export const Configuration = t.type({
   port: t.string,
   host: t.string,
+  nodeEnv: NodeEnv,
   databaseConfiguration: DatabaseConfiguration,
 });
 
@@ -24,6 +31,7 @@ export const CONFIGURATION = F.pipe(
   Configuration.decode({
     port: process.env.PORT ?? "8085",
     host: process.env.HOST ?? "0.0.0.0",
+    nodeEnv: process.env.NODE_ENV ?? "development",
     databaseConfiguration: {
       host: process.env.DB_HOST ?? "localhost",
       port: process.env.DB_PORT ?? "9999",

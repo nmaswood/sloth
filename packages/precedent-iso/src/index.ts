@@ -1,1 +1,1 @@
-export const name = "iso is my name";
+export { assertNever } from "./assertNever";

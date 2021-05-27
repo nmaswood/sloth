@@ -1,3 +1,10 @@
 import { createPool } from "slonik";
+import { CONFIGURATION, DatabaseConfiguration } from "../config";
 
-const pool = createPool("postgres://");
+export const pool = createPool(
+  connectionStringFromConfig(CONFIGURATION.databaseConfiguration)
+);
+
+function connectionStringFromConfig(config: DatabaseConfiguration): string {
+  return undefined!;
+}
