@@ -9,9 +9,13 @@
   "scripts": {
     "build": "yarn workspaces foreach -tvp run build",
     "test": "yarn workspaces foreach -tv run test",
-    "fix": "yarn workspaces foreach -tv run fix"
+    "fix": "yarn workspaces foreach -tv run fix",
+    "postinstall": "husky install"
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "devDependencies": {
+    "husky": "^6.0.0"
+  }
 }
